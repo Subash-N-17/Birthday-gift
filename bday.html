@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday, Sohini ❤️</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Georgia", "Times New Roman", serif;
+            background: #fff8f9;
+            color: #4a3038;
+            overflow-x: hidden;
+        }
+
+        /* =========================
+           BACKGROUND HEARTS
+        ========================= */
+
+        .hearts {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .heart {
+            position: absolute;
+            bottom: -50px;
+            color: #f3a6b8;
+            opacity: 0.35;
+            animation: floatHeart linear infinite;
+        }
+
+        .heart:nth-child(1) {
+            left: 8%;
+            font-size: 18px;
+            animation-duration: 9s;
+        }
+
+        .heart:nth-child(2) {
+            left: 22%;
+            font-size: 25px;
+            animation-duration: 12s;
+            animation-delay: 2s;
+        }
+
+        .heart:nth-child(3) {
+            left: 40%;
+            font-size: 15px;
+            animation-duration: 10s;
+            animation-delay: 4s;
+        }
+
+        .heart:nth-child(4) {
+            left: 65%;
+            font-size: 28px;
+            animation-duration: 13s;
+            animation-delay: 1s;
+        }
+
+        .heart:nth-child(5) {
+            left: 85%;
+            font-size: 20px;
+            animation-duration: 11s;
+            animation-delay: 3s;
+        }
+
+        @keyframes floatHeart {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+
+            15% {
+                opacity: 0.35;
+            }
+
+            85% {
+                opacity: 0.35;
+            }
+
+            100% {
+                transform: translateY(-110vh) rotate(25deg);
+                opacity: 0;
+            }
+        }
+
+        /* =========================
+           COMMON
+        ========================= */
+
+        section {
+            position: relative;
+            z-index: 1;
+            padding: 80px 22px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .small-title {
+            font-family: Arial, sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 11px;
+            color: #c77b91;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            font-size: 34px;
+            line-height: 1.2;
+            color: #6b3d4c;
+            margin-bottom: 20px;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 30px 22px;
+            background:
+                radial-gradient(circle at 20% 20%, #ffe1e9 0%, transparent 28%),
+                radial-gradient(circle at 85% 70%, #f9dce5 0%, transparent 30%),
+                linear-gradient(145deg, #fffafb, #fff1f5);
+        }
+
+        .hero-content {
+            max-width: 600px;
+            animation: fadeUp 1.5s ease;
+        }
+
+        .crown {
+            font-size: 42px;
+            margin-bottom: 15px;
+            animation: gentle 3s ease-in-out infinite;
+        }
+
+        .hero h1 {
+            font-size: clamp(55px, 16vw, 100px);
+            font-weight: normal;
+            font-style: italic;
+            color: #7d4355;
+            line-height: 0.95;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 span {
+            color: #d37d97;
+        }
+
+        .birthday-text {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #9d6474;
+            margin-bottom: 25px;
+        }
+
+        .hero-message {
+            font-size: 20px;
+            line-height: 1.7;
+            color: #67444e;
+            margin-bottom: 35px;
+        }
+
+        .scroll-btn {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            background: #d98aa2;
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            box-shadow: 0 10px 25px rgba(210, 125, 150, 0.25);
+            transition: 0.3s;
+        }
+
+        .scroll-btn:hover {
+            transform: translateY(-3px);
+            background: #c9748f;
+        }
+
+        /* =========================
+           LOVE LETTER
+        ========================= */
+
+        .letter-section {
+            background: #fff;
+        }
+
+        .letter {
+            background: #fffafb;
+            border: 1px solid #f3dce3;
+            border-radius: 28px;
+            padding: 35px 27px;
+            box-shadow: 0 15px 45px rgba(120, 70, 85, 0.08);
+        }
+
+        .letter p {
+            font-size: 17px;
+            line-height: 1.9;
+            margin-bottom: 18px;
+        }
+
+        .signature {
+            font-size: 25px;
+            font-style: italic;
+            color: #c56f88;
+            margin-top: 28px;
+        }
+
+        /* =========================
+           PROPOSAL DATE
+        ========================= */
+
+        .proposal {
+            background: linear-gradient(160deg, #fff1f5, #fff9fa);
+            text-align: center;
+        }
+
+        .date-card {
+            margin-top: 30px;
+            padding: 38px 25px;
+            border-radius: 30px;
+            background: rgba(255,255,255,0.7);
+            border: 1px solid #f0d5de;
+            box-shadow: 0 15px 40px rgba(160, 90, 110, 0.08);
+        }
+
+        .date-number {
+            font-size: 65px;
+            color: #c96f89;
+            font-weight: bold;
+        }
+
+        .date-month {
+            font-family: Arial, sans-serif;
+            letter-spacing: 5px;
+            color: #9c6474;
+            text-transform: uppercase;
+        }
+
+        .date-card p {
+            margin-top: 22px;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        /* =========================
+           REASONS
+        ========================= */
+
+        .reasons {
+            background: #fff;
+        }
+
+        .reason-grid {
+            display: grid;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .reason {
+            padding: 22px;
+            border-radius: 22px;
+            background: #fff7f9;
+            border: 1px solid #f3dce3;
+            transition: 0.3s;
+        }
+
+        .reason:hover {
+            transform: translateY(-4px);
+        }
+
+        .reason-number {
+            font-family: Arial, sans-serif;
+            color: #d4869d;
+            font-size: 12px;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+
+        .reason h3 {
+            font-size: 21px;
+            margin-bottom: 7px;
+            color: #704351;
+        }
+
+        .reason p {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.7;
+            color: #765861;
+        }
+
+        /* =========================
+           FINAL MESSAGE
+        ========================= */
+
+        .final {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            background:
+                radial-gradient(circle at 50% 50%, #ffe2ea, transparent 45%),
+                #fff8fa;
+        }
+
+        .final h2 {
+            font-size: 42px;
+            font-style: italic;
+        }
+
+        .final p {
+            font-size: 19px;
+            line-height: 1.8;
+            margin: 25px auto;
+            max-width: 520px;
+        }
+
+        .big-heart {
+            font-size: 70px;
+            display: block;
+            margin: 25px 0;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            15% {
+                transform: scale(1.15);
+            }
+
+            30% {
+                transform: scale(1);
+            }
+
+            45% {
+                transform: scale(1.12);
+            }
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 30px 20px;
+            background: #6d414f;
+            color: #ffeef3;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+        /* =========================
+           ANIMATIONS
+        ========================= */
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes gentle {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 500px) {
+
+            section {
+                padding: 70px 18px;
+            }
+
+            .hero {
+                min-height: 100svh;
+            }
+
+            .hero-message {
+                font-size: 17px;
+            }
+
+            h2 {
+                font-size: 30px;
+            }
+
+            .letter {
+                padding: 28px 21px;
+            }
+
+            .letter p {
+                font-size: 16px;
+            }
+
+            .date-number {
+                font-size: 55px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Floating hearts -->
+    <div class="hearts">
+        <div class="heart">♡</div>
+        <div class="heart">♥</div>
+        <div class="heart">♡</div>
+        <div class="heart">♥</div>
+        <div class="heart">♡</div>
+    </div>
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="crown">👑</div>
+
+            <div class="birthday-text">
+                A little birthday surprise for
+            </div>
+
+            <h1>
+                Sohini<span>♡</span>
+            </h1>
+
+            <p class="hero-message">
+                Happy Birthday, my baby.<br>
+                Today is all about the most beautiful girl
+                who makes my world a little more beautiful
+                just by being in it.
+            </p>
+
+            <a href="#letter" class="scroll-btn">
+                Open your little surprise ♡
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         LOVE LETTER
+    ========================= -->
+
+    <section class="letter-section" id="letter">
+
+        <div class="container">
+
+            <div class="small-title center">
+                For my baby
+            </div>
+
+            <h2 class="center">
+                A little letter for you
+            </h2>
+
+            <div class="letter">
+
+                <p>
+                    My dearest baby,
+                </p>
+
+                <p>
+                    Happy Birthday, Sohini ❤️
+                </p>
+
+                <p>
+                    I don't know if words can ever properly explain
+                    how special you are to me, but today I want to
+                    try anyway.
+                </p>
+
+                <p>
+                    You are one of those beautiful parts of my life
+                    that I never want to take for granted. Your smile,
+                    your little ways, your presence, and even the
+                    smallest moments with you mean more to me than
+                    you probably realize.
+                </p>
+
+                <p>
+                    And baby, whenever I think about us, one date
+                    will always have a special place in my heart...
+                </p>
+
+                <p>
+                    <strong>16 June.</strong>
+                </p>
+
+                <p>
+                    The day I proposed to you.
+                    The day our story became something even more
+                    beautiful to me.
+                </p>
+
+                <p>
+                    Today isn't just your birthday, baby.
+                    It's another reminder of how lucky I feel
+                    to have you in my life.
+                </p>
+
+                <p>
+                    So smile a little extra today, enjoy every
+                    moment, and remember that somewhere in this
+                    world there is someone who loves seeing you happy.
+                </p>
+
+                <div class="signature">
+                    Always yours,<br>
+                    Your baby ❤️
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         16 JUNE
+    ========================= -->
+
+    <section class="proposal">
+
+        <div class="container">
+
+            <div class="small-title">
+                Our little beginning
+            </div>
+
+            <h2>
+                The day I chose you
+            </h2>
+
+            <div class="date-card">
+
+                <div class="date-number">
+                    16
+                </div>
+
+                <div class="date-month">
+                    June
+                </div>
+
+                <p>
+                    A date that will always be special to me,
+                    because that was the day I proposed to
+                    my beautiful baby.
+                </p>
+
+                <p>
+                    ❤️
+                </p>
+
+                <p>
+                    And if I could go back to that day,
+                    I would still choose you.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         REASONS
+    ========================= -->
+
+    <section class="reasons">
+
+        <div class="container">
+
+            <div class="small-title center">
+                Just because
+            </div>
+
+            <h2 class="center">
+                Little things I love about you
+            </h2>
+
+            <div class="reason-grid">
+
+                <div class="reason">
+                    <div class="reason-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Your smile
+                    </h3>
+
+                    <p>
+                        Baby, your smile has this magical ability
+                        to make an ordinary moment feel special.
+                    </p>
+                </div>
+
+
+                <div class="reason">
+                    <div class="reason-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Your presence
+                    </h3>
+
+                    <p>
+                        Even when we aren't doing anything special,
+                        having you around somehow makes everything
+                        better.
+                    </p>
+                </div>
+
+
+                <div class="reason">
+                    <div class="reason-number">
+                        03
+                    </div>
+
+                    <h3>
+                        The way you are
+                    </h3>
+
+                    <p>
+                        I don't love you because you are perfect.
+                        I love you because you are you, baby.
+                    </p>
+                </div>
+
+
+                <div class="reason">
+                    <div class="reason-number">
+                        04
+                    </div>
+
+                    <h3>
+                        Our little moments
+                    </h3>
+
+                    <p>
+                        The conversations, laughs, silly moments
+                        and memories we make are some of my
+                        favourite things.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FINAL
+    ========================= -->
+
+    <section class="final">
+
+        <div class="container">
+
+            <div class="small-title">
+                One last thing, baby
+            </div>
+
+            <h2>
+                Happy Birthday,<br>
+                my beautiful Sohini
+            </h2>
+
+            <span class="big-heart">
+                ❤️
+            </span>
+
+            <p>
+                I hope this new year of your life brings you
+                countless reasons to smile, beautiful memories,
+                peaceful days and everything your heart wishes for.
+            </p>
+
+            <p>
+                And selfishly...
+                I hope I get to be beside you for many of those
+                beautiful moments.
+            </p>
+
+            <p>
+                <strong>
+                    I love you, baby. Always. ♡
+                </strong>
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+        Made with love for Sohini ♡
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+        // Smooth reveal when sections enter the screen
+
+        const sections = document.querySelectorAll("section");
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+
+                entries.forEach((entry) => {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.style.animation =
+                            "fadeUp 1s ease forwards";
+
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.12
+            }
+        );
+
+        sections.forEach((section) => {
+            observer.observe(section);
+        });
+
+    </script>
+
+</body>
+</html>
